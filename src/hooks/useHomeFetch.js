@@ -47,6 +47,7 @@ export const useHomeFetch = () => {
     facetOverallCount,
     setFacetOverallCount,
     setShowFacets,
+    atlasLanguageProperties,
   } = useContext(SearchParametersContext);
 
   const { t } = useTranslation();

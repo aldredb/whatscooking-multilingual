@@ -35,6 +35,17 @@ export const SearchParametersProvider = (props) => {
   const [facetOverallCount, setFacetOverallCount] = useState(0);
   const [showFacets, setShowFacets] = useState(false);
 
+  /* 
+    To store Atlas-specific properties when choosing different language
+  */
+  const defaultAtlasLanguageProperty = {
+    database: "whatscooking",
+    collection: "restaurants",
+    synonymCollection: "menu_synonyms",
+    index: "TODO"
+  }
+  const [atlasLanguageProperties, setAtlasLanguageProperties] = useState(defaultAtlasLanguageProperty); 
+
   const value = {
     restaurants,
     setRestaurants,
@@ -88,6 +99,8 @@ export const SearchParametersProvider = (props) => {
     facetOverallCount,
     showFacets,
     setShowFacets,
+    atlasLanguageProperties,
+    setAtlasLanguageProperties,
   };
 
   return (
